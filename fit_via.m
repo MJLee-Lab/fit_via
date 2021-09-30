@@ -42,7 +42,7 @@ fitopt.Upper = [1 max(x)+2 5 1];
 fitopt.StartPoint =  [0.5 (median(x)) 1 1];
 
 %viability curve fit function
-f = fittype('Emax + (top-Emax) ./ (1+(10.^((x-EC50).*hill)))','options',fitopt );
+f = fittype('a + (d-a) ./ (1+(10.^((x-b).*c)))','options',fitopt );
 
 [resp gof] = fit(x,y,f); %x must be log10 values
 
